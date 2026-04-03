@@ -4,52 +4,51 @@
 ![GitHub license](https://img.shields.io/github/license/adminsairolotech-bit/second-brain-skills?style=flat-square)
 ![GitHub top language](https://img.shields.io/github/languages/top/adminsairolotech-bit/second-brain-skills?style=flat-square)
 
-A curated collection of **Claude Skills** that helps turn **Claude Code** into a practical, reusable **second brain** for research, writing, documentation, automation, and brand-consistent output.
+A practical collection of modular **Claude Skills** that helps turn **Claude Code** into a reusable **second brain** for research, documentation, writing, workflows, and consistent communication.
 
-> This project is organized around **progressive disclosure**: load only the guidance needed for the current task, then expand when deeper context is required.
+> Built around **progressive disclosure**: start with minimal context, expand only when deeper guidance is needed.
 
 ---
 
-## Why this project
+## Why this repository
 
-Claude Code is excellent at technical execution. With a structured skill layer, it can also support high-value knowledge work:
+Claude Code is excellent at implementation. This repository adds a reusable skill layer for knowledge-heavy work so you can:
 
-- Capture and reuse institutional knowledge
-- Standardize recurring content workflows
-- Generate SOPs, runbooks, and internal documentation
-- Produce presentation-ready communication assets
-- Maintain consistent tone, voice, and style across outputs
+- Capture and reuse organizational knowledge
+- Standardize repeatable writing and documentation tasks
+- Generate SOPs, runbooks, briefs, and playbooks faster
+- Keep tone, style, and branding consistent across outputs
+- Reduce prompt bloat with composable context modules
 
 ---
 
 ## Key Features
 
-- **Progressive context loading** to reduce prompt bloat and token waste
-- **Composable skill modules** for flexible extension and reuse
-- **Documentation workflows** for SOPs, runbooks, and playbooks
-- **Content generation patterns** for briefs, decks, and social assets
-- **Brand and voice consistency** via reusable style references
-- **Automation-friendly structure** for MCP-style integrations (e.g., GitHub, Zapier)
+- **Modular skill design** for mix-and-match workflows
+- **Progressive context loading** to minimize token usage
+- **Documentation-first patterns** (SOPs, runbooks, internal docs)
+- **Content production templates** for briefs, decks, and messaging
+- **Style and brand consistency hooks** via reusable references
+- **Automation-ready structure** for tool-driven pipelines (e.g., MCP-style flows)
 - **Second-brain orientation** focused on retrieval, synthesis, and repeatability
 
 ---
 
 ## Repository Structure
 
-This repository is organized as reusable skill assets.  
-A typical skill includes:
+The repository is organized as reusable skill assets. A typical skill includes:
 
 - Instruction/prompt logic
-- Optional templates and output schema
-- Reusable artifacts (e.g., config, style, branding files)
+- Optional templates or output schema
+- Supporting artifacts (config, style guide, brand references)
 
-As the library grows, expect skills to remain modular so you can adopt only what your workflow needs.
+As the library grows, each skill is intended to remain independent and composable so teams can adopt only what they need.
 
 ---
 
 ## Installation
 
-> Current repository state may be early-stage. If folder names differ, adapt examples below to actual paths.
+This repository is content-first (skills/templates), so setup is lightweight.
 
 ### 1) Clone the repository
 
@@ -60,15 +59,17 @@ cd second-brain-skills
 
 ### 2) (Optional) Create a Python virtual environment
 
+If you add Python utilities/scripts around these skills:
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate   # macOS/Linux
-# .venv\Scripts\activate    # Windows PowerShell
+# .venv\Scripts\activate    # Windows
 ```
 
 ### 3) (Optional) Install dependencies
 
-If a `requirements.txt` or `pyproject.toml` is present:
+If/when a `requirements.txt` is present:
 
 ```bash
 pip install -r requirements.txt
@@ -78,65 +79,63 @@ pip install -r requirements.txt
 
 ## Usage
 
-Because this repo is a **skill collection**, usage typically follows one of these patterns:
+Use these skills as building blocks in Claude Code sessions.
 
-### A) Copy skill prompts/templates into your Claude Code workflow
-- Select a skill folder
-- Reuse/adapt its instructions
-- Add project-specific constraints and desired output format
+### Basic workflow
 
-### B) Reference skills as modular “building blocks”
-- Start with a lightweight base skill
-- Layer in deeper context only when needed
-- Combine multiple skills for complex workflows (e.g., research → outline → final draft)
+1. Pick a skill relevant to your task (e.g., documentation, synthesis, brand voice).
+2. Load only the minimal instructions needed.
+3. Expand with related templates/artifacts as complexity increases.
+4. Save refined outputs back into your internal knowledge system.
 
-### C) Integrate into automation pipelines
-- Use skill outputs as structured handoffs
-- Connect with MCP tools or external automation platforms
-- Keep brand/voice config centralized for consistency
+### Example prompt pattern
 
----
+- **Task**: “Create an incident runbook for service outages.”
+- **Load skill**: runbook/SOP module
+- **Add constraints**: audience, format, tone, review checklist
+- **Output**: versioned, reusable internal document
 
-## Example Workflow
+### Recommended best practices
 
-1. Choose a task (e.g., “Create incident-response runbook”)
-2. Load the relevant documentation skill
-3. Provide organizational context, constraints, and audience
-4. Generate draft output
-5. Apply style/brand skill for final polish
-6. Save artifact back to your knowledge base
+- Start narrow; avoid loading every skill at once
+- Keep organization-specific style references in one place
+- Version important templates and output formats
+- Review generated assets before operational use
 
 ---
 
 ## Contributing
 
-Contributions are welcome. Suggested contributions include:
-
-- New skills for repeatable workflows
-- Better templates and schema definitions
-- Improvements to prompt clarity and modularity
-- Real-world usage examples and documentation
+Contributions are welcome—especially new skill modules, templates, and quality improvements.
 
 ### How to contribute
 
-1. Fork the repository
+1. Fork this repository
 2. Create a feature branch  
-   `git checkout -b feat/my-skill`
-3. Add/update skill files and docs
-4. Commit changes  
-   `git commit -m "Add: <short description>"`
-5. Push branch  
-   `git push origin feat/my-skill`
+   `git checkout -b feat/your-skill-name`
+3. Add or improve a skill module (include usage notes/examples)
+4. Commit with clear messages  
+   `git commit -m "feat: add incident postmortem skill template"`
+5. Push your branch  
+   `git push origin feat/your-skill-name`
 6. Open a Pull Request with:
-   - What problem this solves
-   - Expected inputs/outputs
-   - Example usage
+   - Problem statement
+   - What was added/changed
+   - Example input/output
+   - Any migration or compatibility notes
+
+### Contribution guidelines
+
+- Keep skills modular and composable
+- Prefer concise, testable instructions over long monolithic prompts
+- Include examples where possible
+- Preserve clarity, consistency, and practical usability
 
 ---
 
 ## License
 
-No license is currently defined in this repository.
+This repository currently does **not** define a license.
 
-Until a license is added, treat all rights as reserved by default.  
-If you are the maintainer, consider adding an OSS license (e.g., MIT) to clarify reuse permissions.
+Until a license is added, all rights are reserved by default and reuse may be restricted.  
+If you are the maintainer, consider adding an open-source license (e.g., MIT) for clarity.
