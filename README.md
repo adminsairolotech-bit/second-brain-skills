@@ -4,122 +4,139 @@
 ![GitHub license](https://img.shields.io/github/license/adminsairolotech-bit/second-brain-skills?style=flat-square)
 ![GitHub top language](https://img.shields.io/github/languages/top/adminsairolotech-bit/second-brain-skills?style=flat-square)
 
-A curated collection of **Claude Skills** that transforms Claude Code into a practical, reusable **second brain** for research, writing, documentation, workflow automation, and brand-consistent output.
+A curated collection of **Claude Skills** that helps turn **Claude Code** into a practical, reusable **second brain** for research, writing, documentation, automation, and brand-consistent output.
 
-This repository is designed around **progressive disclosure**: skills load deeper instructions only when needed, reducing context overload while preserving expert-level guidance.
+> This project is organized around **progressive disclosure**: load only the guidance needed for the current task, then expand when deeper context is required.
 
 ---
 
 ## Why this project
 
-Claude Code is excellent at coding tasks, but with a structured skill layer it can also support high-value knowledge work:
+Claude Code is excellent at technical execution. With a structured skill layer, it can also support high-value knowledge work:
 
 - Capture and reuse institutional knowledge
-- Standardize repeatable content workflows
-- Generate presentations and communication assets
-- Produce SOPs, runbooks, and internal documentation
-- Maintain consistent tone, style, and visual identity
+- Standardize recurring content workflows
+- Generate SOPs, runbooks, and internal documentation
+- Produce presentation-ready communication assets
+- Maintain consistent tone, voice, and style across outputs
 
 ---
 
-## Key features
+## Key Features
 
-- **Progressive context loading** to keep prompts focused and efficient
-- **Composable skill architecture** for easy extension and customization
-- **Brand & voice systems** for consistent cross-channel output
-- **Documentation workflows** for SOPs, runbooks, and internal guides
-- **Presentation/content generation** patterns for slides and carousels
-- **Automation-friendly design** compatible with MCP-style integrations (e.g., GitHub, Zapier)
-- **Knowledge-first organization** to support “second brain” workflows
+- **Progressive context loading** to reduce prompt bloat and token waste
+- **Composable skill modules** for flexible extension and reuse
+- **Documentation workflows** for SOPs, runbooks, and playbooks
+- **Content generation patterns** for briefs, decks, and social assets
+- **Brand and voice consistency** via reusable style references
+- **Automation-friendly structure** for MCP-style integrations (e.g., GitHub, Zapier)
+- **Second-brain orientation** focused on retrieval, synthesis, and repeatability
 
 ---
 
-## Repository structure
+## Repository Structure
 
-This repository is organized as a set of reusable Claude Skills and supporting assets.  
+This repository is organized as reusable skill assets.  
 A typical skill includes:
 
-- Instructions / prompt logic
-- Optional templates and output schemas
-- Reusable artifacts (e.g., config and branding files)
+- Instruction/prompt logic
+- Optional templates and output schema
+- Reusable artifacts (e.g., config, style, branding files)
 
-Example generated assets from a brand/voice workflow:
-
-- `brand.json` — visual identity tokens (colors, typography, assets)
-- `config.json` — defaults for style, output format, and generation behavior
-- `voice.md` (or similar) — tone, messaging, and writing guidance
-
-> Exact file names and folders may evolve as skills are added.
+As the library grows, expect skills to remain modular so you can adopt only what your workflow needs.
 
 ---
 
 ## Installation
 
-### Option 1: Clone this repository
-1. Clone:
-   - `git clone https://github.com/adminsairolotech-bit/second-brain-skills.git`
-2. Enter the directory:
-   - `cd second-brain-skills`
-3. Add the relevant skill files to your Claude Code skill/workspace setup.
+> Current repository state may be early-stage. If folder names differ, adapt examples below to actual paths.
 
-### Option 2: Download as ZIP
-1. Click **Code → Download ZIP**
-2. Extract locally
-3. Copy the desired skill folders into your Claude Code environment
+### 1) Clone the repository
+
+```bash
+git clone https://github.com/adminsairolotech-bit/second-brain-skills.git
+cd second-brain-skills
+```
+
+### 2) (Optional) Create a Python virtual environment
+
+```bash
+python -m venv .venv
+source .venv/bin/activate   # macOS/Linux
+# .venv\Scripts\activate    # Windows PowerShell
+```
+
+### 3) (Optional) Install dependencies
+
+If a `requirements.txt` or `pyproject.toml` is present:
+
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
 ## Usage
 
-1. Choose a skill that matches your task (e.g., brand system, docs workflow, content generation).
-2. Load or reference the skill in Claude Code.
-3. Provide project-specific context (audience, goals, constraints, style preferences).
-4. Run iteratively:
-   - Generate draft output
-   - Review/edit
-   - Save reusable artifacts for future runs
+Because this repo is a **skill collection**, usage typically follows one of these patterns:
 
-### Suggested workflow
+### A) Copy skill prompts/templates into your Claude Code workflow
+- Select a skill folder
+- Reuse/adapt its instructions
+- Add project-specific constraints and desired output format
 
-- Start with a **Brand & Voice** skill to establish baseline standards.
-- Reuse generated assets in downstream skills (documentation, slides, content).
-- Keep outputs versioned in your repo for traceability and team reuse.
+### B) Reference skills as modular “building blocks”
+- Start with a lightweight base skill
+- Layer in deeper context only when needed
+- Combine multiple skills for complex workflows (e.g., research → outline → final draft)
+
+### C) Integrate into automation pipelines
+- Use skill outputs as structured handoffs
+- Connect with MCP tools or external automation platforms
+- Keep brand/voice config centralized for consistency
+
+---
+
+## Example Workflow
+
+1. Choose a task (e.g., “Create incident-response runbook”)
+2. Load the relevant documentation skill
+3. Provide organizational context, constraints, and audience
+4. Generate draft output
+5. Apply style/brand skill for final polish
+6. Save artifact back to your knowledge base
 
 ---
 
 ## Contributing
 
-Contributions are welcome. If you want to add or improve skills:
+Contributions are welcome. Suggested contributions include:
+
+- New skills for repeatable workflows
+- Better templates and schema definitions
+- Improvements to prompt clarity and modularity
+- Real-world usage examples and documentation
+
+### How to contribute
 
 1. Fork the repository
-2. Create a feature branch
-3. Add/update skill files and documentation
-4. Submit a pull request with:
-   - What the skill does
-   - Inputs/outputs
+2. Create a feature branch  
+   `git checkout -b feat/my-skill`
+3. Add/update skill files and docs
+4. Commit changes  
+   `git commit -m "Add: <short description>"`
+5. Push branch  
+   `git push origin feat/my-skill`
+6. Open a Pull Request with:
+   - What problem this solves
+   - Expected inputs/outputs
    - Example usage
-   - Any dependencies or integration assumptions
-
-### Contribution guidelines
-
-- Keep prompts/instructions modular and readable
-- Prefer explicit output schemas where possible
-- Document required context and expected results
-- Avoid hardcoding brand/project specifics in reusable skills
-
----
-
-## Roadmap ideas
-
-- Additional domain-specific skills (product, marketing, ops, support)
-- Stronger schema validation for generated assets
-- Example projects and end-to-end workflow demos
-- Improved interoperability with external automation tools
 
 ---
 
 ## License
 
-This repository currently does **not** declare a license.
+No license is currently defined in this repository.
 
-If you are the maintainer, consider adding a license (e.g., MIT) to clarify usage rights for contributors and adopters.
+Until a license is added, treat all rights as reserved by default.  
+If you are the maintainer, consider adding an OSS license (e.g., MIT) to clarify reuse permissions.
